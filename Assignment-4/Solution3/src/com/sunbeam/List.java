@@ -10,14 +10,26 @@ public class List {
 			
 		}
 		
-	
-	private Node head;
-	public void  List() {
-		 head=null;
-		 
 	}
-	public void append(int data) {
+	private Node head;
+	public void  PrintMiddle() {
+		 Node slow_ptr=head;
+		 Node fast_ptr=head;
+		while(fast_ptr!=null && fast_ptr.next!=null ) {
+			fast_ptr=fast_ptr.next.next;
+		    slow_ptr=slow_ptr.next;
+	}
+		Object slow_Ptr;
+		System.out.println("the middle element is:"+slow_Ptr.data);
+	}
+	
+	public void add( int data) {
 		Node newNode=new Node(data);
+		newNode.next=head;
+		head=newNode;
+	}
+	public void displayList() {
+		
 if(head==null) {
 	head=newNode;
 	return ;
