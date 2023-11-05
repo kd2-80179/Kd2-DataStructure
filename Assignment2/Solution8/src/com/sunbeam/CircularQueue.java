@@ -5,7 +5,7 @@ public class CircularQueue {
 	private int arr[];
 	private int rear,front;
 	private final int SIZE;
-	public static int count;
+	public  int count;
 	public CircularQueue(int size) {
 		SIZE=size;
 		arr=new int[SIZE];
